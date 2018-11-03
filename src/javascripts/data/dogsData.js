@@ -1,12 +1,18 @@
 import axios from 'axios';
 
-const examplePromise = () => new Promise((resolve, reject) => {
-  axios.get('http://localhost:3001/example')
-    .done((data) => {
-      resolve(data);
-    })
-    .fail((error) => {
-      reject(error);
-    });
-});
-export default { examplePromise };
+// const examplePromise = () =>
+// {
+// return new Promise((resolve, reject) => {
+//   axios.get('https://random-dogs-api.herokuapp.com/dogs/23')
+//   .then((data) => {
+//     resolve(data);
+//   })
+//     .catch((error) => {
+//       reject(error);
+//     });
+// });
+// };
+
+const getDogs = () => axios.get('https://random-dogs-api.herokuapp.com/dogs/23');
+
+export default getDogs;
