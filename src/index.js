@@ -1,9 +1,10 @@
 import $ from 'jquery';
 import 'bootstrap';
 import './index.scss';
-// import dog from './images/dog.jpeg';
+import dogImage from './images/dogPic.jpg';
 import getDogs from './javascripts/data/dogsData';
 
+$('#dogImage').attr('src', dogImage);
 const createDogCards = (dogs) => {
   let newString = '';
   dogs.forEach((dog) => {
